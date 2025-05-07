@@ -1,12 +1,12 @@
-```markdown
+```
 # ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models
 ```
 [English](#english) | [中文](#chinese)
 
 <a name="english"></a>
-
+```
 ## English
-
+```
 ABIBE is an advanced framework for high-precision building extraction from remote sensing imagery, leveraging vision-language models (VLMs) to enhance feature representation and segmentation accuracy.
 
 ### Introduction
