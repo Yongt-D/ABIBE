@@ -44,7 +44,6 @@ The ABIBE framework addresses these challenges through several key innovations:
 
 #### Requirements
 
-```
 Python >= 3.8
 PyTorch >= 1.10.0
 CUDA >= 11.3 (for GPU support)
