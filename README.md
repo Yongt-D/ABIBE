@@ -1,5 +1,5 @@
 # ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models
-
+# The complete code will be open sourced after receiving the paper
 [English](#english) | [中文](#chinese)
 
 <a name="english"></a>
@@ -228,5 +228,5 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 
 本项目采用 [MIT 许可证](LICENSE)。
 
-```
+
 
