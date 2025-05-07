@@ -1,0 +1,14 @@
+numpy
+scipy
+matplotlib
+pillow
+tqdm
+pyyaml
+pathlib
+torch
+torchvision
+transformers
+opencv-python
+scikit-image
+pandas
+seaborn
