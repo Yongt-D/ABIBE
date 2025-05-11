@@ -1,5 +1,5 @@
 # ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models
-# The complete code will be open sourced after receiving the paper
+# Currently, the repository contains essential information about the framework structure, while we are in the process of organizing and documenting the complete codebase to ensure it is user-friendly and properly documented for the research community. This approach allows us to incorporate any refinements that may arise during the revision process while ensuring that the final released code fully aligns with the accepted manuscript.
 [English](#english) | [中文](#chinese)
 
 <a name="english"></a>
