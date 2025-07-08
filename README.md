@@ -1,5 +1,13 @@
 # ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models
-# Currently, the repository contains essential information about the framework structure, while we are in the process of organizing and documenting the complete codebase to ensure it is user-friendly and properly documented for the research community. This approach allows us to incorporate any refinements that may arise during the revision process while ensuring that the final released code fully aligns with the accepted manuscript.
+
+**Good news! Our paper has been officially accepted by *IEEE Transactions on Geoscience and Remote Sensing (TGRS)*.**
+
+**好消息！我们的论文已被 *IEEE Transactions on Geoscience and Remote Sensing (TGRS)* 正式接收。**
+
+We are currently actively organizing and refining the architecture and documentation of the codebase to ensure its usability and to fully align it with the final published version of the paper. **We expect to fully release all code in this repository by July 31, 2025.**
+
+我们目前正在积极整理和完善代码库的架构与文档，以确保代码的易用性，并使其与最终发表的论文版本完全匹配。**我们预计将在2025年7月31日之前，在此仓库中完整公开所有代码。**
+
 [English](#english) | [中文](#chinese)
 
 <a name="english"></a>
@@ -14,31 +22,32 @@ Building extraction from remote sensing imagery is a critical task with applicat
 
 The ABIBE framework addresses these challenges through several key innovations:
 
-1. **Hierarchical Feature Transfer Mechanism**: Selectively extracts and adapts multi-scale visual representations from the JanusPro vision-language model, effectively leveraging pre-trained knowledge while addressing domain gaps
-2. **Dynamic Multi-Scale Feature Fusion**: Adaptively integrates vision-language features with spatial information using text-guided attention to focus on relevant building characteristics
-3. **Enhanced Loss Function**: Combines BCE, Dice, Focal, and Tversky loss components to address class imbalance and improve segmentation quality in challenging regions
+1.  **Hierarchical Feature Transfer Mechanism**: Selectively extracts and adapts multi-scale visual representations from the JanusPro vision-language model, effectively leveraging pre-trained knowledge while addressing domain gaps.
+2.  **Dynamic Multi-Scale Feature Fusion**: Adaptively integrates vision-language features with spatial information using text-guided attention to focus on relevant building characteristics.
+3.  **Enhanced Loss Function**: Combines BCE, Dice, Focal, and Tversky loss components to address class imbalance and improve segmentation quality in challenging regions.
 
 ### Performance
 
 #### WHU Building Dataset
 
 | Method | IoU(%) | Precision(%) | Recall(%) | F1(%) |
-|--------|--------|-------------|-----------|-------|
+| :--- | :--- | :--- | :--- | :--- |
 | U-Net | 87.17 | 86.61 | 85.23 | 85.42 |
 | ABIBE | **91.23** | **96.04** | **94.80** | **95.41** |
 
 #### INRIA Building Dataset
 
 | Method | IoU(%) | Precision(%) | Recall(%) | F1(%) |
-|--------|--------|-------------|-----------|-------|
+| :--- | :--- | :--- | :--- | :--- |
 | U-Net | 73.70 | 84.11 | 78.79 | 80.81 |
 | ABIBE | **82.07** | **91.99** | **88.39** | **90.15** |
 
 ### Installation
 
-> Full code will be provided upon paper acceptance
+> **Note:** Our paper has been accepted by *IEEE Transactions on Geoscience and Remote Sensing (TGRS)*. We are currently organizing the codebase and expect to release the full code before **July 31, 2025**.
 
 #### Requirements
+
 ```
 Python >= 3.8
 PyTorch >= 1.10.0
@@ -101,7 +110,7 @@ If you use ABIBE in your research, please cite our paper:
 @article{xxx2025abibe,
   title={ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models},
   author={xxx},
-  journal={xxx},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
   year={2025}
 }
 ```
@@ -109,7 +118,6 @@ If you use ABIBE in your research, please cite our paper:
 ### License
 
 This project is licensed under the [MIT License](LICENSE).
-
 
 ---
 
@@ -125,29 +133,29 @@ ABIBE是一个利用视觉语言模型（VLM）增强的遥感图像建筑物提
 
 ABIBE框架通过以下关键创新解决这些挑战：
 
-1. **分层特征迁移机制**：从JanusPro视觉语言模型中选择性地提取和适应多尺度视觉表示，有效利用预训练知识同时解决域差异问题
-2. **动态多尺度特征融合**：通过文本引导的注意力机制，自适应地整合视觉语言特征与空间信息，关注相关的建筑特征
-3. **增强损失函数**：结合BCE、Dice、Focal和Tversky损失组件，解决类别不平衡问题并提高困难区域的分割质量
+1.  **分层特征迁移机制**：从JanusPro视觉语言模型中选择性地提取和适应多尺度视觉表示，有效利用预训练知识同时解决域差异问题。
+2.  **动态多尺度特征融合**：通过文本引导的注意力机制，自适应地整合视觉语言特征与空间信息，关注相关的建筑特征。
+3.  **增强损失函数**：结合BCE、Dice、Focal和Tversky损失组件，解决类别不平衡问题并提高困难区域的分割质量。
 
 ### 性能表现
 
 #### WHU建筑物数据集
 
 | 方法 | IoU(%) | 精确率(%) | 召回率(%) | F1(%) |
-|------|--------|----------|----------|-------|
+| :--- | :--- | :--- | :--- | :--- |
 | U-Net | 87.17 | 86.61 | 85.23 | 85.42 |
 | ABIBE | **91.23** | **96.04** | **94.80** | **95.41** |
 
 #### INRIA建筑物数据集
 
 | 方法 | IoU(%) | 精确率(%) | 召回率(%) | F1(%) |
-|------|--------|----------|----------|-------|
+| :--- | :--- | :--- | :--- | :--- |
 | U-Net | 73.70 | 84.11 | 78.79 | 80.81 |
 | ABIBE | **82.07** | **91.99** | **88.39** | **90.15** |
 
 ### 安装说明
 
-> 完整代码将在论文接受后提供
+> **请注意:** 我们的论文已被 *IEEE Transactions on Geoscience and Remote Sensing (TGRS)* 接收。我们正在整理代码库，完整代码预计将于**2025年7月31日**前发布。
 
 #### 环境要求
 
@@ -213,7 +221,7 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 @article{xxx2025abibe,
   title={ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models},
   author={xxx},
-  journal={xxx},
+  journal={IEEE Transactions on Geoscience and Remote Sensing},
   year={2025}
 }
 ```
@@ -221,6 +229,3 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 ### 许可证
 
 本项目采用 [MIT 许可证](LICENSE)。
-
-
-
