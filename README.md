@@ -107,12 +107,16 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 If you use ABIBE in your research, please cite our paper:
 
 ```
-@article{xxx2025abibe,
-  title={ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models},
-  author={xxx},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
-  year={2025}
-}
+@ARTICLE{11077429,
+  author={Deng, Yongtao and Lei, Dajiang and Peng, Yidong and Li, Weisheng and Zhang, Liping},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={ABIBE: Adaptive Building Information-Based Extraction From Remote Sensing Imagery Using Vision–Language Models}, 
+  year={2025},
+  volume={63},
+  number={},
+  pages={1-17},
+  keywords={Feature extraction;Buildings;Remote sensing;Visualization;Adaptation models;Data mining;Semantics;Mathematical models;Data models;Architecture;Building extraction;cross-modal fusion;deep learning;hierarchical feature transfer;remote sensing;semantic segmentation;vision–language models (VLMs)},
+  doi={10.1109/TGRS.2025.3587692}}
 ```
 
 ### License
@@ -218,12 +222,16 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 如果您在研究中使用了ABIBE，请引用我们的论文：
 
 ```
-@article{xxx2025abibe,
-  title={ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models},
-  author={xxx},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
-  year={2025}
-}
+@ARTICLE{11077429,
+  author={Deng, Yongtao and Lei, Dajiang and Peng, Yidong and Li, Weisheng and Zhang, Liping},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={ABIBE: Adaptive Building Information-Based Extraction From Remote Sensing Imagery Using Vision–Language Models}, 
+  year={2025},
+  volume={63},
+  number={},
+  pages={1-17},
+  keywords={Feature extraction;Buildings;Remote sensing;Visualization;Adaptation models;Data mining;Semantics;Mathematical models;Data models;Architecture;Building extraction;cross-modal fusion;deep learning;hierarchical feature transfer;remote sensing;semantic segmentation;vision–language models (VLMs)},
+  doi={10.1109/TGRS.2025.3587692}}
 ```
 
 ### 许可证
