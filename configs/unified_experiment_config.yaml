@@ -1,0 +1,135 @@
+# configs/unified_experiment_config.yaml
+# 统一实验配置文件 - 确保所有实验使用相同的训练设置
+
+# Data configuration
+data:
+  root_dir: './data'
+  train:
+    image_dir: 'whu_building/train/image'
+    label_dir: 'whu_building/train/label'
+    text_features_dir: 'whu_building/train/text_features'
+    text_descriptions_dir: 'whu_building/train/text_descriptions'
+  val:
+    image_dir: 'whu_building/val/image'
+    label_dir: 'whu_building/val/label'
+    text_features_dir: 'whu_building/val/text_features'
+    text_descriptions_dir: 'whu_building/val/text_descriptions'
+  test:
+    image_dir: 'whu_building/test/image'
+    label_dir: 'whu_building/test/label'
+    text_features_dir: 'whu_building/test/text_features'
+    text_descriptions_dir: 'whu_building/test/text_descriptions'
+  
+  dataloader:
+    num_workers: 4  # 与消融实验保持一致
+    pin_memory: true
+    prefetch_factor: 2  # 与消融实验保持一致
+
+# Model configuration
+model:
+  # Basic model parameters
+  in_channels: 3
+  out_channels: 1
+  base_channels: 64
+  image_size: 512
+  
+  # Integration settings
+  enable_janus: true                  # Enable JanusPro features
+  use_text: true                      # Use text features
+  janus_model_path: 'models/janus_pro_1b'
+  freeze_janus: true                  # Freeze JanusPro parameters
+  
+  # Advanced model features
+  enable_boundary_awareness: true     # Enhance boundary detection
+  enable_deep_supervision: true       # Enable deep supervision
+  enable_tta: true                    # Test-time augmentation for inference
+  use_scse: true                      # Use Spatial-Channel Squeeze & Excitation
+  use_boundary_enhancement: true      # Enhanced boundary module
+  use_multi_scale_fusion: true        # Multi-scale feature fusion
+  
+  # Building-specific optimizations
+  use_boundary_refinement: true       # Specific boundary refinement
+  focus_on_small_buildings: true      # Enhanced focus on small buildings
+  use_adaptive_weighting: true        # Dynamic feature weighting
+
+# Training configuration - 与消融实验保持一致
+training:
+  # Basic training settings
+  epochs: 150                          # 为复杂模型提供充分训练时间
+  batch_size: 2
+  accumulation_steps: 1               # 与消融实验保持一致
+  optimizer:
+    type: 'AdamW'                   # AdamW optimizer
+    learning_rate: 0.0001
+    weight_decay: 0.0005
+    beta1: 0.9
+    beta2: 0.999
+    
+  # Learning rate schedule
+  lr_scheduler:
+    type: 'cosine_warmup'           # Cosine schedule with warmup
+    warmup_epochs: 5
+    min_lr: 0.000001
+    
+  # Advanced training features
+  mixed_precision: true             # Enable mixed precision
+  gradient_clipping:
+    enabled: true
+    max_norm: 1.0
+  
+  # Augmentation settings
+  augmentation:
+    enabled: true
+    flip_prob: 0.5
+    rotate_prob: 0.3
+    rotate_degrees: [-30, 30]
+    scale_prob: 0.3
+    scale_range: [0.8, 1.2]
+    brightness_contrast_prob: 0.3
+    brightness_limit: 0.2
+    contrast_limit: 0.2
+    elastic_transform_prob: 0.2      # Add elastic transform
+    grid_distortion_prob: 0.1        # Add grid distortion
+    
+  # Loss function settings
+  loss:
+    type: 'simplified'  # 使用简化的损失平衡器
+    bce_weight: 1.0
+    dice_weight: 1.0
+    focal_weight: 0.5
+    tversky_weight: 0.5
+    focal_gamma: 2.0
+    tversky_alpha: 0.6
+    tversky_beta: 0.4
+    
+  # Checkpointing settings - 与消融实验保持一致
+  checkpoint:
+    dir: 'checkpoints'
+    save_freq: 5
+    early_stopping: 0               # 禁用早停
+    
+  # Logging settings
+  logging:
+    tensorboard: true
+    log_dir: 'logs'
+    log_images_freq: 5               # Log images every 5 epochs
+    log_metrics_freq: 1              # Log metrics every epoch
+
+# Testing configuration
+testing:
+  batch_size: 4                       # 与消融实验保持一致
+  threshold: 0.5                     # Binary threshold
+  vis_samples: 20                    # Number of samples to visualize
+  metrics: ['iou', 'dice', 'precision', 'recall', 'f1', 'accuracy']
+  save_predictions: true
+  tta: true                          # Use test-time augmentation
+  
+  # Advanced testing features
+  ensemble_predictions: true         # Use model ensemble
+  post_processing:
+    enabled: true
+    crf: false                       # Conditional Random Field
+    morphology: true                 # Morphological operations
+    small_object_removal: true       # Remove small objects
+    minimum_size: 100                # Minimum object size
+    hole_filling: true               # Fill holes in predictions
