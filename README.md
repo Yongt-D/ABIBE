@@ -1,13 +1,4 @@
 # ABIBE: Adaptive Building Information-Based Extraction from Remote Sensing Imagery Using Vision-Language Models
-
-**Good news! Our paper has been officially accepted by *IEEE Transactions on Geoscience and Remote Sensing (TGRS)*.**
-
-**好消息！我们的论文已被 *IEEE Transactions on Geoscience and Remote Sensing (TGRS)* 正式接收。**
-
-We are currently actively organizing and refining the architecture and documentation of the codebase to ensure its usability and to fully align it with the final published version of the paper. **We expect to fully release all code in this repository by July 31, 2025.**
-
-我们目前正在积极整理和完善代码库的架构与文档，以确保代码的易用性，并使其与最终发表的论文版本完全匹配。**我们预计将在2025年7月31日之前，在此仓库中完整公开所有代码。**
-
 [English](#english) | [中文](#chinese)
 
 <a name="english"></a>
@@ -41,10 +32,6 @@ The ABIBE framework addresses these challenges through several key innovations:
 | :--- | :--- | :--- | :--- | :--- |
 | U-Net | 73.70 | 84.11 | 78.79 | 80.81 |
 | ABIBE | **82.07** | **91.99** | **88.39** | **90.15** |
-
-### Installation
-
-> **Note:** Our paper has been accepted by *IEEE Transactions on Geoscience and Remote Sensing (TGRS)*. We are currently organizing the codebase and expect to release the full code before **July 31, 2025**.
 
 #### Requirements
 
@@ -156,10 +143,6 @@ ABIBE框架通过以下关键创新解决这些挑战：
 | :--- | :--- | :--- | :--- | :--- |
 | U-Net | 73.70 | 84.11 | 78.79 | 80.81 |
 | ABIBE | **82.07** | **91.99** | **88.39** | **90.15** |
-
-### 安装说明
-
-> **请注意:** 我们的论文已被 *IEEE Transactions on Geoscience and Remote Sensing (TGRS)* 接收。我们正在整理代码库，完整代码预计将于**2025年7月31日**前发布。
 
 #### 环境要求
 
