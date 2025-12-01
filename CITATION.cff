@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Deng"
+    given-names: "Yongtao"
+  - family-names: "Lei"
+    given-names: "Dajiang"
+  - family-names: "Peng"
+    given-names: "Yidong"
+  - family-names: "Li"
+    given-names: "Weisheng"
+  - family-names: "Zhang"
+    given-names: "Liping"
+title: "ABIBE: Adaptive Building Information-Based Extraction From Remote Sensing Imagery Using Vision–Language Models"
+date-released: 2025-01-01
+url: "https://github.com/Yongt-D/ABIBE"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Deng"
+      given-names: "Yongtao"
+    - family-names: "Lei"
+      given-names: "Dajiang"
+    - family-names: "Peng"
+      given-names: "Yidong"
+    - family-names: "Li"
+      given-names: "Weisheng"
+    - family-names: "Zhang"
+      given-names: "Liping"
+  doi: "10.1109/TGRS.2025.3587692"
+  journal: "IEEE Transactions on Geoscience and Remote Sensing"
+  title: "ABIBE: Adaptive Building Information-Based Extraction From Remote Sensing Imagery Using Vision–Language Models"
+  year: 2025
+  volume: 63
+  start: 1
+  end: 17
