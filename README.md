@@ -205,7 +205,7 @@ python scripts/predict.py --image path/to/image --config configs/abibe_config.ya
 如果您在研究中使用了ABIBE，请引用我们的论文：
 
 ```
-@ARTICLE{11077429,
+@ARTICLE{ABIBE_2025,
   author={Deng, Yongtao and Lei, Dajiang and Peng, Yidong and Li, Weisheng and Zhang, Liping},
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
   title={ABIBE: Adaptive Building Information-Based Extraction From Remote Sensing Imagery Using Vision–Language Models}, 
